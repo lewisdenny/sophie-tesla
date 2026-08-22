@@ -101,17 +101,39 @@ button {
   text-indent: 0.48em;
 }
 
-h1 {
-  margin: 0;
-  font-size: clamp(2.35rem, 11vw, 3.35rem);
-  font-weight: 560;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
+.model-y-hero {
+  position: relative;
+  display: grid;
+  height: clamp(156px, 43vw, 205px);
+  margin: 0 -10px 4px;
+  place-items: center;
+}
+
+.model-y-hero::before {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
+  height: 38%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255, 67, 146, 0.2), transparent 68%);
+  content: "";
+  filter: blur(18px);
+}
+
+.model-y-hero img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 18px rgba(0, 0, 0, 0.42));
 }
 
 .intro {
   max-width: 340px;
-  margin: 18px auto 0;
+  margin: 10px auto 0;
   color: var(--muted);
   font-size: clamp(0.94rem, 3.8vw, 1.04rem);
   line-height: 1.5;
@@ -386,8 +408,13 @@ footer span {
     margin-bottom: 14px;
   }
 
+  .model-y-hero {
+    height: 148px;
+    margin-top: -4px;
+  }
+
   .intro {
-    margin-top: 12px;
+    margin-top: 8px;
   }
 
   .sound-button {
