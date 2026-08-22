@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#090a0d">
+    <meta name="description" content="A playful Tesla-inspired emissions testing soundboard.">
+    <meta name="color-scheme" content="dark">
+    <title>Toybox — Emissions Testing</title>
+    <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="mode-badge">
+          <span class="mode-badge__light" aria-hidden="true"></span>
+          Emissions testing mode
+        </div>
+        <p class="wordmark">TOYBOX</p>
+        <h1>Remote fun,<br>ready to go.</h1>
+        <p class="intro">For when you want to play with the Tesla when I'm not around</p>
+      </header>
+
+      <section class="sound-grid" aria-label="Emissions soundboard">
+        <button class="sound-button" type="button" data-sound="./audio/ludicrous-blast.wav" data-label="Ludicrous Blast">
+          <span class="sound-button__icon sound-button__icon--burst" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-button__label">Ludicrous</span>
+          <span class="sound-button__detail">Blast</span>
+        </button>
+
+        <button class="sound-button" type="button" data-sound="./audio/falcon-heavy.wav" data-label="Falcon Heavy">
+          <span class="sound-button__icon sound-button__icon--heavy" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-button__label">Falcon</span>
+          <span class="sound-button__detail">Heavy</span>
+        </button>
+
+        <button class="sound-button" type="button" data-sound="./audio/plaid-poot.wav" data-label="Plaid Poot">
+          <span class="sound-button__icon sound-button__icon--plaid" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-button__label">Plaid</span>
+          <span class="sound-button__detail">Poot</span>
+        </button>
+
+        <button class="sound-button" type="button" data-sound="./audio/cyber-rumble.wav" data-label="Cyber Rumble">
+          <span class="sound-button__icon sound-button__icon--cyber" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-button__label">Cyber</span>
+          <span class="sound-button__detail">Rumble</span>
+        </button>
+
+        <button class="sound-button" type="button" data-sound="./audio/supercharged.wav" data-label="Supercharged">
+          <span class="sound-button__icon sound-button__icon--charged" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-button__label">Super</span>
+          <span class="sound-button__detail">Charged</span>
+        </button>
+
+        <button class="sound-button" type="button" data-sound="./audio/short-shorts.wav" data-label="Short Shorts">
+          <span class="sound-button__icon sound-button__icon--short" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-button__label">Short</span>
+          <span class="sound-button__detail">Shorts</span>
+        </button>
+      </section>
+
+      <div class="playback-status" aria-live="polite" aria-atomic="true">
+        <span class="playback-status__dot" aria-hidden="true"></span>
+        <span data-status>Tap a sound to begin</span>
+      </div>
+
+      <footer>
+        <span aria-hidden="true">P</span>
+        Parked &bull; ready to play
+      </footer>
+    </main>
+
+    <audio data-player preload="none"></audio>
+  </body>
+</html>
